@@ -104,3 +104,4 @@ def checa_numero(msg):
 nomes = ['danilo','jÃ³','tranquilo','thicas']
 nomes = cadastra_nome(['vaporub','strepsirs'])
 print(nomes)
+print("Mudando o commit")
