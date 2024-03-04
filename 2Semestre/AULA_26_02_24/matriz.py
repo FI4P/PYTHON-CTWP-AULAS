@@ -4,6 +4,18 @@
 #         print(matriz[i])
 #     return
 
+def geraMatriz(linhas, colunas , num):
+    matriz =[]
+
+    for i in range(linhas):
+        linha = []
+        for j in range(colunas):
+            linha.append(num)
+        matriz.append(linha)
+    print()
+    return matriz
+
+
 # matriz = [[1, 2, 3, 4], [4, 5,6, 4], [7 ,8 ,9, 4],  [7 ,8 ,9, 4]]
 
 
