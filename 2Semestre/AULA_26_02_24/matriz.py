@@ -27,12 +27,12 @@ def geraMatriz(linhas, colunas , num):
 # #         matriz[i][j] = 0;
 
 
-# # for i in range(len(matriz)):
-# #     for j in range(len(matriz[i])):
-# #         if(i == j):
-# #             matriz[i][j] = 1
-# #         else:
-# #             matriz[i][j]= 0
+# for i in range(len(matriz)):
+#     for j in range(len(matriz[i])):
+#         if(i == j):
+#             matriz[i][j] = 1
+#         else:
+#             matriz[i][j]= 0
 
 
 
