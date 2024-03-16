@@ -59,10 +59,36 @@
 #Podemos representar essa matriz da seguinte forma: [ [ 1 , 1 , 1] , [ 2 , 2 , 2] , [3 , 3 , 3] ]
 
 
-matriz = [ [ 1 , 1 , 1 ] , [ 2 , 2 , 2] , [3 , 3 , 3] ]
+matriz = [ [ 0 , 0 , 0 ] , [ 0 , 0 , 0] , [0 , 0 , 0] ]
 
 for linha in range(len(matriz)):
     resultado =  "Não Quadrada" if len(matriz[linha]) !=  len(matriz) else "Quadrada"    
+
+#==========================================================================================================================#
+
+#A diagonal principal de uma matriz é definida pelo indice da coluna ser igual ao indice da coluna
+
+#Podemos descobrir a diagonal de uma matriz utilizando um for ou dois com uma verificação.
+
+#Exemplo: Printando os elementos da diagonal de uma matriz
+termo = False 
+for linha in range(len(matriz)):
+    if(termo): 
+        print(matriz[linhaAnteriror]) 
+        termo = False
+    
+    for coluna in range(len(matriz[linha])):    
+        # Se indice linha == indice coluna (elemento diagonal)
+        if(linha == coluna):
+         matriz[linha][coluna] = 1
+         linhaAnteriror = linha
+         termo = True
+
+
+
+
+
+
 
             
             
