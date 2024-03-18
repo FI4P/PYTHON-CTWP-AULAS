@@ -77,34 +77,34 @@ matriz = geraMatriz(8   ,8 , 1)
 
 
 
-# pesos = [1 , 2 , 3 , 2 , 1]
-# somaPesos = 0
-# for i in range (len(pesos)):
-#     somaPesos = somaPesos + pesos[i]
+pesos = [1 , 2 , 3 , 2 , 1]
+somaPesos = 0
+for i in range (len(pesos)):
+    somaPesos = somaPesos + pesos[i]
 
-# notas = [[10, 7], [9,2], [5,9], [3, 1], [10, 0]]
+notas = [[10, 7], [9,2], [5,9], [3, 1], [10, 0]]
 
-# media = []
+media = []
 
-# for j in range(len(notas[0])):
-#     soma = 0
-#     for i in range(len(pesos)):
-#         soma += pesos[i] * notas[i][j]
-#     media.append(soma/somaPesos)
+for j in range(len(notas[0])):
+    soma = 0
+    for i in range(len(pesos)):
+        soma += pesos[i] * notas[i][j]
+    media.append(soma/somaPesos)
 
-# print(media)
-
-
-circulo = geraMatriz(1000, 1000)
-for i in range(len(circulo)):
-    for j in range(len(circulo)):
-        if((i-len(circulo)//2)**2 + (j-len(circulo)//2)**2 < (len(circulo)//2)**2):
-            circulo[i][j] = i+j
+print(media)
 
 
+# circulo = geraMatriz(1000, 1000)
+# for i in range(len(circulo)):
+#     for j in range(len(circulo)):
+#         if((i-len(circulo)//2)**2 + (j-len(circulo)//2)**2 < (len(circulo)//2)**2):
+#             circulo[i][j] = i+j
 
-plt.imshow(circulo)
-plt.show()
+
+
+# plt.imshow(circulo)
+# plt.show()
 
 
 

@@ -2,7 +2,7 @@ from methods import methods
 
 #7 -Uma matriz retangular da forma 5xN (5 linhas e N colunas) representa as notas de alunos em 5 provas. Cada linha é a nota de um aluno em uma das provas, enquanto cada coluna representa as 5 notas de um aluno somente. Media ponderada das notas.
 
-pesoMateria = [1, 2, 3, 4, 5]
+pesoMateria = [1 , 2 , 3 , 2 , 1]
 
 matrizNotasAlunos = [
     [ 10, 7], 
@@ -13,27 +13,23 @@ matrizNotasAlunos = [
 ]
 
 def mediaPonderada(listaPesos, matrizNotasAlunos):
-    somaListaPesos = 0
-    mediasPonderadas = []
-    #Fazendo a soma dos pesos - Iremos utilizar para calcular a média
-    for pesos in range(len(listaPesos)):
-        somaListaPesos = somaListaPesos + listaPesos[pesos]
-    
-    #Percorre as colunas da matriz de notas
-    for coluna in range(len(matrizNotasAlunos[0])):
-        somaNotaPesos = 0
-        # Percorre os elementos da lista de pesos
-        for pesos in range(len(listaPesos)):
-            somaNotaPesos += listaPesos[pesos] * matrizNotasAlunos[coluna][pesos]
-        mediasPonderadas.append(f"Media Aluno {coluna}: {somaNotaPesos/somaListaPesos}")
+  #Percorre os itens da lista de pesos e faz a soma
+  somaPesos = 0
+  for pesos in range(len(listaPesos)):
+    somaPesos += listaPesos[pesos]
+  
+  mediaPonderadaAlunos = []
+  #For para percorrer as colunas da matriz de Notas
+  for coluna in range(len(matrizNotasAlunos[0])):
+    somaNotaPeso = 0
+    for linha in range(len(listaPesos)):
+      somaNotaPeso += listaPesos[linha] * matrizNotasAlunos[linha][coluna]
+    mediaPonderadaAlunos.append(somaNotaPeso/somaPesos)
 
-    return mediasPonderadas
+  return mediaPonderadaAlunos
 
-            
-
-
-mediaPonderadaTotal = mediaPonderada(pesoMateria, matrizNotasAlunos)
-print(mediaPonderadaTotal)
+listaMedias = mediaPonderada(pesoMateria, matrizNotasAlunos)   
+print(listaMedias)        
 
 
 
