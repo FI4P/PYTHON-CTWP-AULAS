@@ -80,10 +80,6 @@ frase = frase.split(" ")
 for elemento in range(len(frase)):
     if(frase[elemento] in numeros.keys()):
         frase[elemento] = str(numeros[frase[elemento]])
-        
-        
-
-
 
 frase = " ".join(frase)
 print(frase)
