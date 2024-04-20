@@ -7,21 +7,11 @@
         print("falou")
         
 '''
-resposta = {
-    "oi": "olá",
-    "tchau": "Falou"
-}
 
-userInput = input("Digite oi ou tchau") 
-
-while userInput not in resposta.keys():
-    userInput = input("Digite oi ou tchau") 
-
-print(resposta[userInput])
     
 
 
-# 2 - Traga ao usuário todas as inforamções sobre um carro de sua escolha>
+# 2 - Traga ao usuário todas as inforamções sobre um carro de sua escolha
 
 carros = {
     'nomes': ['Celta', 'Up', 'T-cross'],
