@@ -220,8 +220,8 @@ def dicFormatedPrint(dic):
 #     arrayPrhase = prhase.split(" ")
 
 #     if(not (word not in arrayPrhase)):
-#         for iWord in range(len(arrayPrhase)):
-#             if(arrayPrhase[iWord] == word):
+#         for element in arrayPrhase):
+#             if(element == word):
 #                 count = count + 1
 #     else:
 #         print("A palavra não aparece nenhuma vez!")
