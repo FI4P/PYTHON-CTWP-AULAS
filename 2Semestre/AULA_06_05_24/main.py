@@ -40,24 +40,45 @@ arraySort = [7 , 5 , 4 , 1 , 3 , 2 ,6]
 
 #
 
-def bubbleSort(lista):
-    j = 0
-    while True:
-        trocas = 0
-        for i in range(len(lista) - 1 ):
-            if(lista[i] > lista[i + 1]):
-                aux = lista[i]
-                lista[i] = lista[i+1]
-                lista[i+1] = aux
-                trocas += 1
-                print(lista)
-        print()
-        j +=1
-        if(trocas == 0):
-            break
-    return lista
+# def bubbleSort(lista):
+#     j = 0
+#     while True:
+#         trocas = 0
+#         for i in range(len(lista) - 1 ):
+#             if(lista[i] > lista[i + 1]):
+#                 aux = lista[i]
+#                 lista[i] = lista[i+1]
+#                 lista[i+1] = aux
+#                 trocas += 1
+#                 print(lista)
+#         print()
+#         j +=1
+#         if(trocas == 0):
+#             break
+#     return lista
 
-bubbleSort(arraySort)
+# bubbleSort(arraySort)
+
+
+
+def quickSort(lista):
+    if(len(lista) < 2):
+        return lista
+    else:
+        pivot = lista[0]
+        menores = [element for element in lista if element < pivot]
+        maiores = [element for element in lista if element > pivot]
+
+        left = quickSort(menores)
+        right = quickSort(maiores)
+        print(left, pivot , right)
+
+        return left + [pivot] + right
+    
+teste = quickSort(arraySort)
+
+print(teste)
+
 
 
 
